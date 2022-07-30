@@ -1,0 +1,77 @@
+POST http://localhost:3010/api/game/1234 HTTP/1.1
+Content-Type: application/json
+
+{
+    "userID":"bill",
+    "requestType":"join"
+}
+
+###
+
+POST http://localhost:3010/api/game/newGame HTTP/1.1
+Content-Type: application/json
+
+{
+    "userID":"bill",
+    "locale":"en",
+    "version":"1.0"
+}
+
+###
+
+POST http://localhost:3010/api/game/20210217030908142 HTTP/1.1
+Content-Type: application/json
+
+{
+    "userID":"sally",
+    "type":"join"
+}
+
+###
+POST http://localhost:3010/api/game/20210217030908142 HTTP/1.1
+Content-Type: application/json
+
+{
+    "userID":"sally",
+    "type":"pass"
+}
+
+###
+POST http://localhost:3010/api/game/20210217030908142 HTTP/1.1
+Content-Type: application/json
+
+{
+    "userID":"bill",
+    "type":"place",
+    "placements":[{
+        "tileID":"en41",
+        "x":3,
+        "y":3
+    },{
+        "tileID":"en93",
+        "x":3,
+        "y":4
+    }]
+}
+
+###
+POST http://localhost:3010/api/game/20210216150110920 HTTP/1.1
+Content-Type: application/json
+
+{
+    "userID":"sally",
+    "type":"move"
+}
+
+###
+GET http://localhost:3010/api/game/20210217030908142 HTTP/1.1
+Content-Type: application/json
+Cookie: userID=bill
+
+###
+GET http://localhost:3010/api/tileSet/en/1.1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "userID":"bill"
+}

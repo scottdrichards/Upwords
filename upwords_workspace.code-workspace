@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "server"
+		},
+		{
+			"path": "shared"
+		},
+		{
+			"path": "client"
+		},
+		{
+			"name": "Upwords",
+			"path": "."
+		}
+	],
+	"settings": {}
+}
